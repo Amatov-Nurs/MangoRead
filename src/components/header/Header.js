@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {
     AppBar,
     Box,
-    Button,
+    Button, CircularProgress,
     Container,
     List, ListItem,
     Typography
@@ -20,7 +20,8 @@ import {useDispatch, useSelector} from "react-redux";
 
 const Header = () => {
     const dispatch = useDispatch();
-    const filter = useSelector(state => state?.mangas?.search);
+    const filter = useSelector(state => state?.mangas?.search?.result);
+    const isLoad = useSelector(state => state?.mangas?.search?.isLoad);
     const apply = useSelector(state => state?.auth?.apply);
     const refresh = useSelector(state => state?.auth?.user?.refresh);
     const username = useSelector(state => state?.auth?.user?.username);
@@ -92,18 +93,23 @@ const Header = () => {
                         sx={!btn ? {borderColor: "#AD02E0"} : {borderColor: "#878787 !important"}}
                         style={filter.length > 0 ? {display: "block"} : {display: "none"}}
                     >
-                        <Typography component="span">{
-                            filter.length > 1
-                                ? `Более ${filter.length} найденных манг!`
-                                : filter.length === 1 ? "Найдена 1 манга!" : "Ничего не найдена"
-                        }</Typography>
-                        <List>
-                            {
-                                filter.map(m => <ListItem key={m?.id}>
+                        {
+                            !isLoad &&
+                                <>
+                                <Typography component="span">{
+                                    filter.length > 1
+                                        ? `Более ${filter.length} найденных манг!`
+                                        : filter.length === 1 ? "Найдена 1 манга!" : "Ничего не найдена"
+                                }</Typography>
+                                    <List>
+                                {
+                                    filter.map(m => <ListItem key={m?.id}>
                                     <Link to={"/"+m?.id} onClick={()=>setSearch([])}>{m?.ru_name}</Link>
-                                </ListItem>)
-                            }
-                        </List>
+                                    </ListItem>)
+                                }
+                                    </List>
+                                </>
+                        }
                     </Box>
                 </Box>
                 <Box className={style.sign}>

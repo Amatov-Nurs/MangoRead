@@ -12,7 +12,10 @@ const initialState = {
         type: {},
         genre: {},
     },
-    search: [],
+    search: {
+        result: [],
+        isLoad: false,
+    },
     isLoad: true
 };
 
@@ -55,8 +58,12 @@ const mangasSlice = createSlice({
                 state.mangas = action.payload
                 state.isLoad = false
             })
+            .addCase(getSearch.pending, (state) => {
+                state.search.isLoad = true;
+            })
             .addCase(getSearch.fulfilled, (state, action) => {
-                state.search = action.payload
+                state.search.result = action.payload;
+                state.search.isLoad = false;
             })
     }
 });
