@@ -1,0 +1,36 @@
+.modal {
+    position: absolute;
+    left: 50%;
+    padding: 37px 60px 60px;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 32px;
+    transition: .3s;
+}
+.user {
+    display: flex;
+}
+.user img {
+    width: 100px;
+    height: 100px;
+    background-color: #c9c9c9;
+    border-radius: 50%;
+    margin: 0 52px 53px 0;
+}
+.user h3 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+}
+.comment {
+    display: flex;
+    align-items: center;
+}
+.comment button {
+    height: 51.5px;
+    padding: 0 32px;
+    border-radius: 0 8px 8px 0;
+}
+.comment fieldset {
+    border-radius: 8px 0 0 8px !important;
+}

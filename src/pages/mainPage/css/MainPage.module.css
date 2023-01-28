@@ -1,0 +1,12 @@
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 142px 0 32px;
+}
+.mainPage>div {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}

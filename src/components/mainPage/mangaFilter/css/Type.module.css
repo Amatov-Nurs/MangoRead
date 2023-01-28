@@ -1,0 +1,32 @@
+.type {
+    width: 100%;
+    position: absolute;
+    top: 108px;
+}
+.type h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    margin: 0 0 10px 15px;
+}
+.type ul {
+    margin-left: 15px;
+}
+.date {
+    margin-top: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.date hr {
+    width: 15px;
+    height: 1px;
+    border: none;
+    outline: none;
+    background-color: #000;
+}
+.date input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

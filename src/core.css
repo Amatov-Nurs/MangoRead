@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+}
+.MuiContainer-root {
+  padding: 0 180px;
+}
+.MuiButtonBase-root:active {
+  border-color: #740994 !important;
+  background: #740994 !important;
+}
+.MuiPagination-ul {
+  display: flex;
+  row-gap: 13px;
+}
+.MuiPagination-ul li:first-child button {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 32px;
+}
+.MuiPagination-ul li:last-child button {
+  padding: 0;
+  margin-left: 32px;
+  margin-right: 0;
+}
+.MuiPagination-ul li:nth-child(6) {
+  display: none;
+}
+.customInput,
+.customInput fieldset,
+.customInput .MuiOutlinedInput-root {
+  width: 500px !important;
+  height: 52px !important;
+}

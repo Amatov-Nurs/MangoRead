@@ -1,0 +1,42 @@
+.link {
+    text-decoration: none;
+}
+.shadow {
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    border-radius: 15px;
+}
+.card {
+    width: 190px;
+    height: 220px;
+    padding: 0 10px 11px;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 5.73%, rgba(0, 0, 0, 0.5) 66.15%);
+    border-radius: 15px;
+}
+.card>div {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+.text>span {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+}
+.text>span span,
+.text>span p {
+    color: #fff;
+}
+.text>span span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.text>span p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}

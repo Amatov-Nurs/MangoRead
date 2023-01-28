@@ -1,0 +1,129 @@
+.aboutPage {
+    margin-top: 143px;
+}
+.aboutPage p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #878787;
+}
+.aboutPage hr {
+    height: 2px;
+    border: none;
+    background-color: #CECECE;
+}
+.back {
+    padding: 0;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.back svg {
+    margin-right: 14px;
+}
+.back:active,
+.aboutPage button:active {
+    background: rgba(135, 135, 135, 0.2) !important;
+}
+.information {
+    display: flex;
+    column-gap: 41px;
+    padding: 33px 0;
+}
+.information img {
+    width: 328px;
+    height: 328px;
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+    border-radius: 16px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info h1 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+}
+.allInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+}
+.allInfo h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+.allInfo div {
+    display: flex;
+    column-gap: 10px;
+}
+.allInfo div span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+}
+.allInfo div:last-child span:last-child {
+    width: 785px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sinops {
+    display: grid;
+    padding: 33px 0;
+}
+.sinops h1 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 10px;
+}
+.addComment {
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 0;
+}
+.bottomBlock h1 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+}
+.bottomBlock button {
+    padding: 10px 0;
+}
+.comments {
+    display: grid;
+}
+.comments ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+    padding: 0 10px;
+}
+.comments ul li {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    min-height: 231px;
+    height: 231px;
+}
+.comments img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.comments ul li h3 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 13px;
+}
+.comments ul li hr {
+    height: 100%;
+    width: 2px;
+}

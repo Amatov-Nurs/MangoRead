@@ -1,0 +1,102 @@
+.auth {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 31px 52px 55px;
+    transition: .3s;
+}
+.close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+}
+.close svg {
+    cursor: pointer;
+}
+.choice {
+    margin-bottom: 40px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #878787;
+}
+.buttons {
+    position: relative;
+    display: flex;
+    column-gap: 30px;
+}
+.buttons span {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+}
+.buttons i {
+    position: absolute;
+    height: 5px;
+    bottom: -6.7px;
+    left: 0;
+    background: #AD02E0;
+    border-radius: 5px;
+    transition: .5s ease-out;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+.form img {
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    background: #c9c9c9;
+}
+.form input {
+    padding: 8px 10px;
+}
+.form input::placeholder {
+    font-size: 24px;
+    line-height: 35px;
+    transform: translate(-2px, 2px);
+}
+.addFile {
+    width: max-content;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    text-transform: uppercase;
+    color: #000000 !important;
+    margin-bottom: 10px !important;
+}
+.checkbox:active,
+.addFile:active {
+    background: none !important;
+}
+.form button:last-child,
+.signin button {
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+.signin {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.signin label span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #878787;
+}

@@ -1,0 +1,21 @@
+.genre {
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: calc(100% - 26px);
+    max-height: 558px;
+    overflow-y: auto;
+    scrollbar-base-color: #740994;
+}
+.genre h2 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+}
+.genre::-webkit-scrollbar {
+    width: 10px;
+}
+.genre::-webkit-scrollbar-thumb {
+    background: #D5D6D5;
+    border-radius: 8px;
+}
