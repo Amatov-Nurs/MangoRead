@@ -21,25 +21,17 @@ export const getComments = createAsyncThunk('comments/getComments', async (id) =
 });
 
 export const addComment = createAsyncThunk('addComment', async ({id, text, access}) => {
-    const {data} = await axios.post(URL+"manga/"+id+"/add-comment/", {text: text}, {
+    await axios.post(URL+"manga/"+id+"/add-comment/", {text: text}, {
         headers: {
             Authorization: "Bearer "+access
         }
     });
-    return data.reverse();
 });
 
 const mangaSlice = createSlice({
     name: 'manga',
     initialState,
-    reducers: {
-        setType(state, action) {
-            state.params.type = action.payload
-        },
-        setGenre(state, action) {
-            state.params.genre = action.payload
-        },
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(getManga.pending, (state) => {

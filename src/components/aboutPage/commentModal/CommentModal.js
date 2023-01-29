@@ -3,7 +3,7 @@ import {Box, Button, Modal, Typography} from "@mui/material";
 import style from "./css/CommentModal.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {Search} from "../../themes/Themes";
-import {addComment} from "../../../redux/slices/mangaSlice";
+import {addComment, getComments} from "../../../redux/slices/mangaSlice";
 
 const CommentModal = ({id, open, setModal}) => {
     const dispatch = useDispatch();
@@ -17,9 +17,11 @@ const CommentModal = ({id, open, setModal}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
+        setModal(false);
         user
             ? dispatch(addComment({id: id, text: comment, access: access}))
             : alert("Вы не зарегистрированы!");
+        dispatch(getComments(id));
     };
 
     useEffect(() => {
