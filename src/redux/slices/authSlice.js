@@ -11,7 +11,9 @@ const initialState = {
     apply: false
 };
 
-export const signUp = createAsyncThunk('SignUp', async (data) => await axios.post("http://134.122.75.14:8666/api/auth/signup/", data));
+export const signUp = createAsyncThunk('SignUp', async (data) => {
+    await axios.post("http://134.122.75.14:8666/api/auth/signup/", data, {headers: { 'Content-type': 'multipart/form-data' }});
+});
 
 export const signIn = createAsyncThunk('SignIn', async ({username, password, apply}) => {
     const response = await axios.post("http://134.122.75.14:8666/api/auth/signin/", {username, password});

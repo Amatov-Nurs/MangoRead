@@ -26,14 +26,13 @@ const SignModal = ({open, setModal, log, setLog}) => {
 
     const registration = () => {
         const data = {
-            "username": username,
-            "nickname": nickname,
-            "password": password,
-            "image_file": file
-        }
-        dispatch(signUp(data));
+            username: username,
+            nickname: nickname,
+            image_file: file,
+            password: password
+        };
         setModal(false);
-        setImage(null);
+        setImage("https://assets8.lottiefiles.com/avatars/default_user.jpg");
         setUsername("");
         setNickname("");
         setPassword("");
