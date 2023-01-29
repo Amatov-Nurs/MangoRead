@@ -22,7 +22,7 @@ const initialState = {
 export const getSearch = createAsyncThunk('search', async (search) => {
     const {data} = await axios.get(URL+"manga/?search="+search);
     if (search === "") {
-        return []
+        return [];
     } else {
         return data;
     }

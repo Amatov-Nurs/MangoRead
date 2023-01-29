@@ -51,6 +51,11 @@ const Header = () => {
         dispatch(getSearch(target.value));
     };
 
+    const handleClick = () => {
+        setSearch("");
+        dispatch(getSearch(""));
+    };
+
     useEffect(() => {
         const data = (key) => JSON.parse(localStorage.getItem(key));
         user
@@ -104,7 +109,7 @@ const Header = () => {
                                     <List>
                                 {
                                     filter.map(m => <ListItem key={m?.id}>
-                                    <Link to={"/"+m?.id} onClick={()=>setSearch([])}>{m?.ru_name}</Link>
+                                    <Link to={"/"+m?.id} onClick={handleClick}>{m?.ru_name}</Link>
                                     </ListItem>)
                                 }
                                     </List>
