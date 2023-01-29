@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {
     AppBar,
     Box,
-    Button, CircularProgress,
+    Button,
     Container,
     List, ListItem,
     Typography
