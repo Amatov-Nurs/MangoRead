@@ -18,10 +18,10 @@ const CommentModal = ({id, open, setModal}) => {
     const handleClick = (e) => {
         e.preventDefault();
         setModal(false);
-        user
-            ? dispatch(addComment({id: id, text: comment, access: access}))
-            : alert("Вы не зарегистрированы!");
-        dispatch(getComments(id));
+        if (user) {
+            dispatch(addComment({id: id, text: comment, access: access}));
+            dispatch(getComments(id));
+        } else alert("Вы не зарегистрированы!");
     };
 
     useEffect(() => {

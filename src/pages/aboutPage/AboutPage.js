@@ -36,7 +36,7 @@ const AboutPage = () => {
 
     useEffect(() => {
         dispatch(getComments(id));
-    }, [dispatch, id, offset]);
+    }, [dispatch, id]);
     return (
         <Box className={style.aboutPage}>
             <Container>
