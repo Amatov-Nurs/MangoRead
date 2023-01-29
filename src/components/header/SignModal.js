@@ -31,11 +31,13 @@ const SignModal = ({open, setModal, log, setLog}) => {
             image_file: file,
             password: password
         };
+        dispatch(signUp(data));
         setModal(false);
         setImage("https://assets8.lottiefiles.com/avatars/default_user.jpg");
         setUsername("");
         setNickname("");
         setPassword("");
+        alert("Вы успешно зарегистрировались!")
     };
 
     const login = () => {
